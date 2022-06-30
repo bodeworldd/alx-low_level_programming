@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - printsout the size of some variables and their type
- * return - if ok, returns 0, else something else
+ * main - Entry point
+ *
+ * Return: Always 0  (Success)
  */
 int main(void)
 {
