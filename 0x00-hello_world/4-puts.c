@@ -1,4 +1,8 @@
 #include <stdio.h>
+/*
+ *
+ *main function to print out something
+*/
 
 int main(void)
 {
