@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 
 /**
  * main - printsout the size of some variables and their type
