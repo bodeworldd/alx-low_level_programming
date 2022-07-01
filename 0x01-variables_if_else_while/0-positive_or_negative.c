@@ -1,11 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
- * main - Entry 
+ * main - Entry point
  * checks if the value stored in the variable
  * 
  * Return: 0 (Success)
@@ -24,28 +22,3 @@ int main(void)
 		printf("%d is zero\n", n);
 	return (0);
 }
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
