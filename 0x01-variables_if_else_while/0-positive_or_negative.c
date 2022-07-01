@@ -5,7 +5,7 @@
 /**
  * main - Entry point
  * checks if the value stored in the variable
- * 
+ *
  * Return: 0 (Success)
  */
 int main(void)
