@@ -4,7 +4,6 @@
 
 /**
  * main - Entry point
- * last digit of a vlue inputed 
  *
  * Return: 0 (Success)
  */
