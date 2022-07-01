@@ -4,7 +4,7 @@
 
 /**
  * main - Entry point
- *Checks the last digit of a vlue inputed 
+ *last digit of a vlue inputed 
  *
  * Return: 0 (Success)
  */
