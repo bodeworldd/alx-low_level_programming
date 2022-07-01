@@ -1,6 +1,2 @@
-#include <studio.h>
-
-int main(){
-printf("Hello, World");
-return 0;
-}
+#!/bin/bash
+gcc -E $CFILE -o c
