@@ -4,7 +4,7 @@
 * main - print _putchar along with a space.
 */
 
-int main(void)
+int main (void)
 {
     _putchar('_');
     _putchar('p');
