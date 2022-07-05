@@ -1,10 +1,10 @@
 #include "main.h"
 
 /*
-*main - print _putchar along with a space.
-*Return: 0
+* main - print _putchar along with a space.
+*
+* Return: 0
 */
-
 int main(void)
 {
 _putchar('_');
