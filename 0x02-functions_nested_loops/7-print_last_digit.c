@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
 * print_last_digit - self explanatory
 * @n: argv
 * Return: the value of the last digit

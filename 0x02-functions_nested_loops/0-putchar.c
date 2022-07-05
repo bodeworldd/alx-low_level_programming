@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
  * main - print _putchar along with a space
  *
  * Return: 0
