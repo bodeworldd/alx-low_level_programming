@@ -2,7 +2,7 @@
 
 /**
  * puts2 - prints part of a string
- * @str: string t
+ * @str: string
  *
  * Return: void
  **/
@@ -15,6 +15,5 @@ if (i % 2 == 0)
 _putchar(str[i]);
 i++;
 }
-
 _putchar('\n');
 }
