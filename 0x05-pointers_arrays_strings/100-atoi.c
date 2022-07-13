@@ -1,6 +1,6 @@
 /**
 * _atoi - changes a string to aint
-* @s: string 
+* @s: string
 *
 * Return: the converted int
 */
