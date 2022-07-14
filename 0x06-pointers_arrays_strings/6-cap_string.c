@@ -1,35 +1,23 @@
 #include "main.h"
-
 /**
- * cap_string - Write a function that capitalizes all words
- *
- * @entry: input string
- *
- * Return: String capitalized
- */
-char *cap_string(char *entry)
+* leet - function that encode a string
+*@str:string
+*Return:returns encoded string
+*/
+
+char *leet(char *str)
 {
-	int conversion, index, count;
+	int index1 = 0, index2;
+	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-	char chars[] = {' ', ',', ';', '.', '!',
-			 '?', '"', '(', ')', '{', '}',  '\t', '\n', '\0'};
-	conversion = 32;
-
-	for (index = 0; entry[index] != '\0'; index++)
+	while (str[++index1])
 	{
-		if (entry[index] >= 'index' && entry[index] <= 'z')
+		for (index2 = 0; index2 <= 7; index2++)
 		{
-			entry[index] =  entry[index] - conversion;
-		}
-		conversion = 0;
-		for (count = 0; chars[count] != '\0'; count++)
-		{
-			if (chars[count] == entry[index])
-			{
-				conversion = 32;
-				break;
-			}
+			if (str[index1] == leet[index2] ||
+			 str[index1] - 32 == leet[index2])
+				str[index1] = index2 + '0';
 		}
 	}
-	return (entry);
+	return (str);
 }
