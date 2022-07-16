@@ -1,54 +1,58 @@
-#include "main.h"
 #include <stdio.h>
-
 /**
- * infinite_add - Adds two numbers
- * @n1: Array of ASCII digits
- * @n2: Second array of ASCII digits
- * @r: Buffer address
- * @size_r: Buffer size
- * Return: Pointer to the addition
+ * infinite_add - add 2 strings.
+ * @n1: string1.
+ * @n2: string2.
+ * @r: buffer
+ * @size_r: buffer size
+ * Return: String with all letters in ROT13 base.
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int c1 = 0, c2 = 0, op, bg, dr1, dr2, add = 0;
-
-	while (*(n1 + c1) != 0)
-		c1++;
-	while (*(n2 + c2) != 0)
-		c2++;
-	if (c1 >= c2)
-		bg = c1;
+	int a_len = 0, b_len = 0, carry = 0, a, b, sum, biggest;
+	
+	while (n1[a_len] != '\0')
+		a_len++;
+	while (n2[b_len] != '\0')
+		b_len++;
+	if (a_len > b_len)
+		biggest = a_len;
 	else
-		bg = c2;
-	if (size_r <= bg + 1)
+		biggest = b_len;
+	if ((biggest + 1) >= size_r)
 		return (0);
-	r[bg + 1] = 0;
-	c1--, c2--, size_r--;
-	dr1 = *(n1 + c1) - 48, dr2 = *(n2 + c2) - 48;
-	while (bg >= 0)
+	r[biggest + 1] = '\0';
+	
+	while (biggest >= 0)
 	{
-		op = dr1 + dr2 + add;
-		if (op >= 10)
-			add = op / 10;
+		a = (n1[a_len - 1] - '0');
+		b = (n1[b_len - 1] - '0');
+		if (a_len > 0 && b_len > 0)
+			sum = a + b + carry;
+		else if (a_len < 0 && b_len > 0)
+			sum = b + carry;
+		else if (a_len > 0 && b_len < 0)
+			sum = a + carry;
 		else
-			add = 0;
-		if (op > 0)
-		*(r + bg) = (op % 10) + 48;
+			sum = carry;
+		
+		if (sum > 9)
+		{
+			carry = sum / 10;
+			sum = (sum % 10) + '0';
+		}
 		else
-			*(r + bg) = 48;
-		if (c1 > 0)
-			c1--, dr1 = *(n1 + c1) - 48;
-		else
-			dr1 = 0;
-		if (c2 > 0)
-			c2--, dr2 = *(n2 + c2) - 48;
-		else
-			dr2 = 0;
-		bg--, size_r--;
+		{
+			carry = 0;
+			sum = sum + '0';
+		}
+		r[biggest] = sum;
+		a_len--;
+		b_len--;
+		biggest--;
 	}
-	if (*r == 0)
-		return (r + 1);
-	else
+	if (*(r) != 0)
 		return (r);
+	else
+		return (r + 1);
 }
