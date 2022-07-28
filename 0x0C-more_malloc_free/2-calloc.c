@@ -6,6 +6,7 @@
 *@size: size of the memory block to be allocated
 *Return: poiner to the address of the memory block
 */
+
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *block;
@@ -22,14 +23,4 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 	else
 		return (NULL);
-}
-A
-A
-A
-A
-A
-A
-A
-A
-A
 }
