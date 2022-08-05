@@ -5,7 +5,8 @@
 /**
  * sum_them_all - A function that sums all parameters
  * @n: Parameter count
- * @...: Other parameters
+ * @...: Other parameter
+ * @ap: ap
  * Return: Sum of all parameters
  */
 int sum_them_all(const unsigned int n, ...)
